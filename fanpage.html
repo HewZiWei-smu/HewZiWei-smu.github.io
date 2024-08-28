@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Bieber Fanpage</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fffbf0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background-image: linear-gradient(to right, #ff6f61, #ffa07a, #ff69b4, #ff1493);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            margin: 20px 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #ff69b4;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .photo {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 5px solid #ff69b4;
+        }
+
+        .bio,
+        .music {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            background-color: #fff5e1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .bio h2,
+        .music h2 {
+            color: #ff6f61;
+        }
+
+        .music ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .music li {
+            background-color: #ffebcd;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .music li:hover {
+            background-color: #ff6f61;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .video {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff5e1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 3px solid #ffa07a;
+        }
+
+        footer {
+            background-image: linear-gradient(to right, #ff69b4, #ffa07a, #ff6f61, #ff1493);
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        #backToTop:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Justin Bieber Fanpage</h1>
+        <nav class="nav-menu">
+            <a href="#bio">About</a>
+            <a href="#music">Top Songs</a>
+            <a href="#video">Latest Video</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <img src="justin1.jpg" alt="Justin Bieber" class="photo">
+
+        <div id="bio" class="bio">
+            <h2>About Justin Bieber</h2>
+            <p>Justin Bieber is a Canadian singer, songwriter, and actor. He was discovered through his YouTube videos in 2008 and quickly rose to fame with his debut single "One Time". Bieber has since become one of the world's best-selling music artists, known for hit songs like "Baby", "Sorry", and "Love Yourself".</p>
+        </div>
+
+        <div id="music" class="music">
+            <h2>Top Songs</h2>
+            <ul>
+                <li>Baby</li>
+                <li>Sorry</li>
+                <li>Love Yourself</li>
+                <li>What Do You Mean?</li>
+                <li>Yummy</li>
+            </ul>
+        </div>
+
+        <div id="video" class="video">
+            <h2>Watch Justin Bieber's Latest Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kTJczUoc26U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Justin Bieber Fanpage. All rights reserved.</p>
+    </footer>
+
+    <div id="backToTop" onclick="scrollToTop()">↑</div>
+
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>
